@@ -1,5 +1,5 @@
 ---
-title: "Where Should Patrick Be? A Data-Driven Scheduling Guide"
+title: "Patrick’s Auto Shop Analysis"
 subtitle: "Maximizing Productivity Across Your Auto Shop Network"
 format:
   html: default
@@ -10,11 +10,10 @@ execute:
 
 ## Solution to the Business Problem
 
-You run 5 auto shops, but you can only be at **one shop per day**. The question is: **Where should you spend your time to maximize productivity and revenue?**
+ **Where should you spend your time to maximize productivity and revenue?**
 
-**Solution:** Your presence makes a huge difference at Shop 4, Shop 2, and Shop 5, but not much at Shop 1 and Shop 3.
+After analyzing 250 days of data, your presence makes a huge difference at Shop 4, Shop 2, and Shop 5, but not much at Shop 1 and Shop 3.
 
-This report uses 250 days of data to show where your presence makes the biggest difference.
 
 ```{python}
 import pandas as pd
@@ -56,10 +55,6 @@ scenarioC = weekly({1:0,2:1,3:2,4:2,5:0})
 ## What the Data Shows
 
 ```{python}
-#| label: fig-all-data
-#| fig-cap: "250 days of data with boss presence & absence shown with avg mean as dotted line."
-#| fig-height: 4
-
 fig, ax = plt.subplots(figsize=(6, 4))
 
 # Create jittered positions for better visibility of all 250 points
@@ -103,7 +98,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-You can see it right away: Shop 4, Shop 2, and Shop 5's orange dots (when you're there) are clearly higher than the blue ones. The dotted lines show the average—notice how the orange dotted line is much higher than the blue one at these shops. At Shop 1 and Shop 3, the dots are more mixed together and the dotted lines are closer together—your presence doesn't seem to matter as much.
+You can see it right away: Shop 4, Shop 2, and Shop 5's orange dots (when you're there) are clearly higher than the blue ones. The **dotted lines show the average**. notice how the orange dotted line is much higher than the blue one at these shops. At Shop 1 and Shop 3, the dots are more mixed together and the dotted lines are closer together—your presence doesn't seem to matter as much.
 
 Here are the exact numbers:
 
@@ -111,7 +106,9 @@ Here are the exact numbers:
 
 ```{python}
 #| echo: false
-print(effects.to_string(index=False))
+effects_rounded = effects.copy()
+effects_rounded[['diff', 'ci_low', 'ci_high']] = effects_rounded[['diff', 'ci_low', 'ci_high']].round(2)
+print(effects_rounded.to_string(index=False))
 ```
 
 ## Your Impact at Each Shop
