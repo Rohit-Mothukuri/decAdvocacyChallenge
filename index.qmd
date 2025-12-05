@@ -58,9 +58,9 @@ scenarioC = weekly({1:0,2:1,3:2,4:2,5:0})
 ```{python}
 #| label: fig-all-data
 #| fig-cap: "250 days of data with boss presence & absence shown with avg mean as dotted line."
-#| fig-height: 7
+#| fig-height: 4
 
-fig, ax = plt.subplots(figsize=(7, 5))
+fig, ax = plt.subplots(figsize=(6, 4))
 
 # Create jittered positions for better visibility of all 250 points
 np.random.seed(42)
