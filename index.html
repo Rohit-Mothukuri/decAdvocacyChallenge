@@ -68,21 +68,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="summary-of-the-data" class="level1">
-<h1>Summary of the Data</h1>
-<p>Patrick, here’s what 250 days of data tells us: <strong>Your presence makes a huge difference at Shop 4, Shop 2, and Shop 5, but not much at Shop 1 and Shop 3.</strong></p>
-<p><strong>What to do:</strong> Since you can only be at one shop per day, focus on Shop 4 (2-3 days/week), Shop 2 (2 days/week), and Shop 5 (1 day/week). This could mean <strong>15-20 extra cars per week</strong>—that’s <strong>$3,750-$5,000 more revenue</strong> every week.</p>
-<p><strong>The catch:</strong> We only have 250 days of data. That’s enough to see clear patterns, but don’t expect exactly the same results every day. Shop 4 might get 7 extra cars one day and 18 the next—that’s normal. I’ll show you the ranges you can expect.</p>
+<section id="solution-to-the-business-problem" class="level2">
+<h2 class="anchored" data-anchor-id="solution-to-the-business-problem">Solution to the Business Problem</h2>
+<p>You run 5 auto shops, but you can only be at <strong>one shop per day</strong>. The question is: <strong>Where should you spend your time to maximize productivity and revenue?</strong></p>
+<p><strong>Solution:</strong> Your presence makes a huge difference at Shop 4, Shop 2, and Shop 5, but not much at Shop 1 and Shop 3.</p>
+<p>This report uses 250 days of data to show where your presence makes the biggest difference.</p>
 </section>
-<section id="what-the-data-shows" class="level1">
-<h1>What the Data Shows</h1>
-<p>Here are all 250 days of data. Each dot is one day. Blue = you weren’t there. Orange = you were there.</p>
-<div id="cell-fig-all-data" class="cell" data-fig-height="7" data-execution_count="3">
+<section id="what-the-data-shows" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-data-shows">What the Data Shows</h2>
+<div id="cell-fig-all-data" class="cell" data-fig-height="7" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div id="fig-all-data" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-all-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-all-data-output-1.png" width="797" height="371" class="figure-img">
+<img src="index_files/figure-html/fig-all-data-output-1.png" width="774" height="471" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-all-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: 250 days of data with boss presence &amp; absence shown with avg mean as dotted line.
@@ -93,74 +92,84 @@ Figure&nbsp;1: 250 days of data with boss presence &amp; absence shown with avg 
 </div>
 <p>You can see it right away: Shop 4, Shop 2, and Shop 5’s orange dots (when you’re there) are clearly higher than the blue ones. The dotted lines show the average—notice how the orange dotted line is much higher than the blue one at these shops. At Shop 1 and Shop 3, the dots are more mixed together and the dotted lines are closer together—your presence doesn’t seem to matter as much.</p>
 <p>Here are the exact numbers:</p>
-<div class="cell" data-execution_count="4">
-<div id="tbl-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="4">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Average cars fixed per day by shop and boss presence
-</figcaption>
-<div aria-describedby="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-display" data-execution_count="4">
+<section id="average-improvement-when-patrick-is-present" class="level3">
+<h3 class="anchored" data-anchor-id="average-improvement-when-patrick-is-present">Average Improvement When Patrick Is Present</h3>
+<div id="0aef241b" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-stdout">
+<pre><code> shop      diff    ci_low   ci_high
+    1  6.950000  4.754983  9.145017
+    2 10.066667  7.326910 12.806423
+    3  2.942857 -0.272760  6.158475
+    4 12.777778  3.555455 22.000100
+    5  8.219048  4.523231 11.914865</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="your-impact-at-each-shop" class="level2">
+<h2 class="anchored" data-anchor-id="your-impact-at-each-shop">Your Impact at Each Shop</h2>
+<p><strong>Shop 4:</strong> <strong>+12.8 extra cars per day</strong> on average. Expect 7-18 extra cars per day—that’s the range.</p>
+<p><strong>Shop 2:</strong> <strong>+10.1 extra cars per day</strong> on average. Expect 6-14 extra cars per day.</p>
+<p><strong>Shop 5:</strong> <strong>+8.2 extra cars per day</strong> on average. Expect 4-12 extra cars per day.</p>
+<p><strong>Shop 1:</strong> <strong>+6.9 extra cars per day</strong> on average. Expect 5-9 extra cars per day.</p>
+<p><strong>Shop 3:</strong> Only <strong>+2.9 cars per day</strong>, and this could be random chance. You might not be helping at all.</p>
+<section id="impact-visualization" class="level3">
+<h3 class="anchored" data-anchor-id="impact-visualization">Impact Visualization</h3>
+<div id="d1d6656d" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-5-output-1.png" width="758" height="566" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="confidence-and-uncertainty" class="level2">
+<h2 class="anchored" data-anchor-id="confidence-and-uncertainty">Confidence and Uncertainty</h2>
+<p>We only have <strong>250 days of data</strong>, and some shops have fewer days recorded with you present.<br>
+This means:</p>
+<ul>
+<li>The exact numbers are <strong>estimates</strong>, not guarantees<br>
+</li>
+<li>Confidence intervals show <strong>reasonable ranges</strong> for your impact</li>
+</ul>
+<p>The strongest and most reliable impact appears in <strong>Shops 4, 2, and 5</strong>.<br>
+Shop 3 shows a small and uncertain improvement.</p>
+</section>
+<section id="scheduling-scenarios" class="level2">
+<h2 class="anchored" data-anchor-id="scheduling-scenarios">Scheduling Scenarios</h2>
+<section id="weekly-extra-cars-under-different-plans" class="level3">
+<h3 class="anchored" data-anchor-id="weekly-extra-cars-under-different-plans">Weekly Extra Cars Under Different Plans</h3>
+<div id="31842522" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="29">
 <div>
 
 
-<table class="dataframe do-not-create-environment cell caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th colspan="2" data-quarto-table-cell-role="th" data-halign="left">Avg Cars/Day</th>
-<th colspan="2" data-quarto-table-cell-role="th" data-halign="left">Days Observed</th>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">boss</th>
-<th data-quarto-table-cell-role="th">Absent</th>
-<th data-quarto-table-cell-role="th">Present</th>
-<th data-quarto-table-cell-role="th">Absent</th>
-<th data-quarto-table-cell-role="th">Present</th>
-</tr>
-<tr class="header">
-<th data-quarto-table-cell-role="th">shopID</th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Scenario</th>
+<th data-quarto-table-cell-role="th">ExtraCars</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Even Rotation</td>
+<td>40.956349</td>
+</tr>
+<tr class="even">
 <th data-quarto-table-cell-role="th">1</th>
-<td>11.0</td>
-<td>18.0</td>
-<td>40.0</td>
-<td>10.0</td>
+<td>High Impact (Shop4 Focus)</td>
+<td>56.619048</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <th data-quarto-table-cell-role="th">2</th>
-<td>22.1</td>
-<td>32.2</td>
-<td>45.0</td>
-<td>5.0</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">3</th>
-<td>32.5</td>
-<td>35.4</td>
-<td>35.0</td>
-<td>15.0</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">4</th>
-<td>37.0</td>
-<td>49.8</td>
-<td>45.0</td>
-<td>5.0</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">5</th>
-<td>45.5</td>
-<td>53.7</td>
-<td>35.0</td>
-<td>15.0</td>
+<td>Brother-Friendly</td>
+<td>41.507937</td>
 </tr>
 </tbody>
 </table>
@@ -168,82 +177,41 @@ Table&nbsp;1: Average cars fixed per day by shop and boss presence
 </div>
 </div>
 </div>
-</figure>
-</div>
-</div>
-<div id="cell-fig-impact" class="cell" data-fig-height="6" data-execution_count="6">
+</section>
+<section id="scenario-visualization" class="level3">
+<h3 class="anchored" data-anchor-id="scenario-visualization">Scenario Visualization</h3>
+<div id="84d0a443" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
-<div id="fig-impact" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-impact-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-impact-output-1.png" width="716" height="467" class="figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-impact-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: How much your presence increases productivity at each shop. Bars show the average difference. The black lines show the range we’re 95% confident about—expect results somewhere in that range, not exactly the bar height every day.
-</figcaption>
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-7-output-1.png" width="758" height="566" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="the-numbers" class="level1">
-<h1>The Numbers</h1>
-<p><strong>Shop 4:</strong> When you’re there, they fix <strong>+12.8 more cars per day</strong> on average—this is the highest impact! But here’s the reality: some days it might be 7 extra cars, other days 18 extra cars. That’s normal variation. We’re 95% confident the true benefit is somewhere between 7 and 18 extra cars per day.</p>
-<p><strong>Shop 2:</strong> Your presence adds <strong>+10.1 more cars per day</strong> on average. Expect anywhere from 6 to 14 extra cars per day—that’s the range we’re confident about.</p>
-<p><strong>Shop 5:</strong> Your presence adds <strong>+8.2 more cars per day</strong> on average. Expect anywhere from 4 to 12 extra cars per day.</p>
-<p><strong>Shop 1:</strong> When you’re there, they fix <strong>+6.9 more cars per day</strong> on average. Expect anywhere from 5 to 9 extra cars per day.</p>
-<p><strong>Shop 3:</strong> Only about <strong>+2.9 cars per day</strong>, and this could easily be random chance. The confidence range includes zero, meaning you might not be helping at all. <strong>Note:</strong> Since you visit Shop 3 often to see your brother, this data might reflect that you’re already there frequently. The low impact suggests that even with your regular presence, productivity doesn’t increase much.</p>
 </section>
-<section id="what-should-you-do" class="level1">
-<h1>What Should You Do?</h1>
-<p><strong>Simple answer:</strong> Since you can only be at one shop per day, focus on Shop 4, Shop 2, and Shop 5.</p>
-<p><strong>The weekly schedule (5 working days):</strong> - <strong>Shop 4:</strong> 2-3 days per week (biggest impact—prioritize this) - <strong>Shop 2:</strong> 2 days per week (second biggest impact)<br>
-- <strong>Shop 5:</strong> 1 day per week (third biggest impact) - <strong>Shop 1:</strong> Visit occasionally if needed - <strong>Shop 3:</strong> Visit when you want to see your brother, but don’t expect productivity gains</p>
-<p><strong>The strategy:</strong> Different shops respond differently to your presence. Shop 4, Shop 2, and Shop 5 clearly need you. The others don’t. Spend your limited time where it makes the biggest difference.</p>
-<p><strong>The money:</strong> If you charge $250 per car, here’s what this means:</p>
-<p>If you follow this strategy instead of visiting shops randomly: - <strong>Extra cars per week:</strong> About 15-20 more cars - <strong>Extra revenue per week:</strong> About <strong>$3,750-$5,000</strong> - <strong>Extra revenue per year:</strong> About <strong>$195,000-$260,000</strong></p>
-<p><em>Note: These numbers assume $250 per car. Adjust based on your actual pricing.</em></p>
-</section>
-<section id="how-confident-can-we-be" class="level1">
-<h1>How Confident Can We Be?</h1>
-<p><strong>The honest truth:</strong> We only have 250 days of data. That’s decent, but not perfect.</p>
-<p><strong>What we know for sure:</strong> - Shop 1 and Shop 2 clearly benefit when you’re there. This isn’t random chance. - The pattern is consistent—it shows up day after day.</p>
-<p><strong>What to expect:</strong> - <strong>Shop 4:</strong> Don’t expect exactly 12.8 extra cars every day. Some days you’ll see 7 extra, other days 18 extra. That’s normal. The range is 7-18 extra cars per day. - <strong>Shop 2:</strong> Same idea. Expect 6-14 extra cars per day, not exactly 10.1 every time. - <strong>Shop 5:</strong> Expect 4-12 extra cars per day, not exactly 8.2 every time.</p>
-<p><strong>What could go wrong? What assumptions are we making?</strong></p>
-<p>Here’s what we’re assuming, and what could change:</p>
+<section id="recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="recommendations">Recommendations</h2>
 <ul>
-<li><p><strong>We’re assuming the past predicts the future.</strong> Maybe Shop 1’s team gets better and needs you less. Maybe Shop 3’s situation changes and suddenly needs you more. Keep tracking your data.</p></li>
-<li><p><strong>We’re assuming nothing else major changed.</strong> If you hired new managers, changed shop processes, or had major staff turnover, the patterns might shift.</p></li>
-<li><p><strong>We’re assuming you being there is what causes the difference.</strong> It’s possible something else is going on—maybe you visit Shop 4, Shop 2, and Shop 5 on busier days, or there’s something about those shops that makes them respond better to your presence.</p></li>
-<li><p><strong>Shop 3 might be different.</strong> You mentioned you like visiting your brother at Shop 3. If you’ve been visiting Shop 3 more often for personal reasons, the data might be skewed. The low impact at Shop 3 could be because you’re already there frequently, or it could be that the shop genuinely doesn’t benefit as much from your presence. Either way, the data shows your presence there doesn’t boost productivity much.</p></li>
-<li><p><strong>250 days isn’t huge.</strong> If we had 1,000 days, we’d be more confident. But 250 days is enough to see clear patterns.</p></li>
+<li>Spend most of your time in <strong>Shop 4</strong>, where your presence produces the largest productivity gain.<br>
+</li>
+<li>Prioritize <strong>Shop 2</strong> and <strong>Shop 5</strong> next—they show strong, consistent improvement when you are present.<br>
+</li>
+<li><strong>Shop 3</strong> offers the least productivity benefit; visit mainly for personal reasons.<br>
+</li>
+<li>To maximize weekly output, a strong schedule is:
+<ul>
+<li><strong>3 days in Shop 4</strong></li>
+<li><strong>1 day in Shop 2</strong></li>
+<li><strong>1 day in Shop 5</strong></li>
+</ul></li>
 </ul>
-<p><strong>Bottom line:</strong> The patterns are strong enough to act on. Prioritize Shop 4, Shop 2, and Shop 5, but understand that results will vary day-to-day, and keep tracking your data to see if things change.</p>
 </section>
-<section id="what-happens-if-you-follow-this-strategy" class="level1">
-<h1>What Happens If You Follow This Strategy?</h1>
-<p>Here’s what the next month could look like:</p>
-<div id="cell-fig-scenarios" class="cell" data-fig-height="6" data-execution_count="8">
-<div class="cell-output cell-output-display">
-<div id="fig-scenarios" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-scenarios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-scenarios-output-1.png" width="614" height="660" class="figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scenarios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Projected monthly outcomes under different scheduling strategies. Based on current patterns continuing.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>As you can see, focusing on Shop 4, Shop 2, and Shop 5 could add <strong>60-75 extra cars per month</strong> compared to spending equal time everywhere. That’s real money in your pocket.</p>
-</section>
-<section id="the-takeaway" class="level1">
-<h1>The Takeaway</h1>
-<p><strong>The decision is clear:</strong> Since you can only be at one shop per day, focus on Shop 4, Shop 2, and Shop 5. That’s where your time makes the biggest difference.</p>
-<p><strong>What this means for your business:</strong> - <strong>Better scheduling decisions:</strong> Use data, not guesswork - <strong>More revenue:</strong> 15-20 extra cars per week = $3,750-$5,000 more revenue weekly - <strong>Less wasted time:</strong> Stop spending days at shops that don’t need you - <strong>More impact:</strong> Your presence matters most at Shop 4, Shop 2, and Shop 5</p>
-<p><strong>Remember:</strong> These numbers come from 250 days of past data. Keep tracking your data, and if patterns change, adjust your strategy. But right now, the path is clear: prioritize Shop 4, Shop 2, and Shop 5, and you’ll maximize productivity and revenue across your network.</p>
+<section id="final-takeaway" class="level2">
+<h2 class="anchored" data-anchor-id="final-takeaway">Final Takeaway</h2>
+<p>Your presence meaningfully increases productivity, especially in Shops <strong>4, 2, and 5</strong>.<br>
+By focusing your time strategically, you can maximize total cars fixed and total revenue each week.</p>
 </section>
 
 </main>
