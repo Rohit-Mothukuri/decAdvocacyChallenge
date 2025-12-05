@@ -113,15 +113,11 @@ print(effects_rounded.to_string(index=False))
 
 ## Your Impact at Each Shop
 
-**Shop 4:** **+12.8 extra cars per day** on average. Expect 7-18 extra cars per day—that's the range.
-
-**Shop 2:** **+10.1 extra cars per day** on average. Expect 6-14 extra cars per day.
-
-**Shop 5:** **+8.2 extra cars per day** on average. Expect 4-12 extra cars per day.
-
-**Shop 1:** **+6.9 extra cars per day** on average. Expect 5-9 extra cars per day.
-
-**Shop 3:** Only **+2.9 cars per day**, and this could be random chance. You might not be helping at all.
+- **Shop 4:** **+12.5 extra cars per day** (range: 3.5-21.5)
+- **Shop 2:** **+10 extra cars per day** (range: 7-13)
+- **Shop 5:** **+8.5 extra cars per day** (range: 4.5-12.5)
+- **Shop 1:** **+7 extra cars per day** (range: 4.5-9.5)
+- **Shop 3:** **+3 extra cars per day** (range: 0.5-6) — may be random chance
 
 
 ### Impact Visualization
